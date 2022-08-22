@@ -38,7 +38,7 @@
         <section class="mx-auto container grid grid-cols-12 gap-8 py-14">
             <!-- player section start -->
             <div class="col-span-9">
-                <div class="grid grid-cols-12 gap-4">
+                <div class="grid grid-cols-12 gap-4" id="players">
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144 (1).png" alt="">
                         <h3 class="text-center p-2 text-2xl font-bold text-white">Neymar Jr.</h3>
@@ -46,7 +46,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144.png" alt="">
@@ -55,7 +55,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144 (2).png" alt="">
@@ -64,7 +64,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144 (3).png" alt="">
@@ -73,7 +73,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144 (4).png" alt="">
@@ -82,7 +82,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
                         <img class="w-screen" src="./img/players/Rectangle 144 (5).png" alt="">
@@ -91,7 +91,7 @@
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
                     </div>
                 </div>
             </div>
@@ -102,6 +102,11 @@
                     <!-- player selected section start -->
                     <div class="grid-rows-6 text-white text-center p-3 bg-black h-96">
                         <h2 class="text-2xl font-bold">Selected - V</h2>
+                        <table class="mx-auto mt-10">
+                            <tbody id="content-container" class="text-2xl">
+                                
+                            </tbody>
+                        </table>
                     </div>
                     <!-- player selected section end -->
                     <!-- player budget section start -->
@@ -109,25 +114,25 @@
                         <h2 class="text-2xl font-bold">Budget</h2>
                         <div class="my-3">
                             <span class="p-1">Per Players</span>
-                            <input type="text" class="p-2 bg-black border-2">
-                            <button class="bg-sky-500 w-72 p-2 mt-5">Calculate</button>
+                            <input type="text" class="p-2 bg-black border-2" id="player-value">
+                            <button class="bg-sky-500 w-72 p-2 mt-5" id="calculate">Calculate</button>
                         </div>
                         <div>
-                            <p>Player Expenses: <span>$5000</span></p>
+                            <p>Player Expenses: <span id="player-total">$5000</span></p>
                         </div>
                         <div class="my-3">
                             <div class="block m-3">
                                 <span class="p-1">Manager</span>
-                            <input type="text" class="p-2 bg-black border-2">
+                            <input type="text" class="p-2 bg-black border-2" id="manager-field">
                             </div>
                             <div class="block m-3">
                                 <span class="p-1">Coach</span>
-                            <input type="text" class="p-2 bg-black border-2">
+                            <input type="text" class="p-2 bg-black border-2" id="coach-field">
                             </div>
-                            <button class="bg-sky-500 w-72 p-2 mt-5">Total Calculate</button>
+                            <button class="bg-sky-500 w-72 p-2 mt-5" id="total-calculate">Total Calculate</button>
                         </div>
                         <div class="m-4">
-                            <h2>Total: $<span>11000</span></h2>
+                            <h2>Total: $<span id="total-amount">11000</span></h2>
                         </div>
                     </div>
                     <!-- player budget section end -->
@@ -140,6 +145,7 @@
     <footer class="bg-slate-800 p-20 text-center">
         <span class="text-white text-xl">Copyright @ 2022 All Rights Reserved.</span>
     </footer>
+    <script src="./js/common.js"></script>
+    <script src="./js/players.js"></script>
 </body>
-
 </html>
