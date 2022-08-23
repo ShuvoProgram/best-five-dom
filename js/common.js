@@ -5,6 +5,8 @@ function calculate(value){
         const totalPlayers = document.getElementById("total-players").innerText;
         const totalPlayerBudget = parseFloat(parseFloat(totalPlayers) * perPlayer);
         displayText(totalPlayerBudget, "player-total");
+        const error = document.getElementById("error-1");
+        error.style.display = 'none';
     } else {
         const error = document.getElementById("error-1");
         error.style.display = 'block';
