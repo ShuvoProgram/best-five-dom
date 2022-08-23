@@ -17,12 +17,13 @@ for (const player of players) {
         }
         
         document.getElementById("calculate").addEventListener("click", function () {
-            calculate("player-value", playerList);
+            calculate("player-value");
+            document.getElementById("player-value").value = '';
             
         })
         document.getElementById("total-calculate").addEventListener("click", function () {
-            const ele = inputInnerText("player-total");
-            const total = totalCalculate("manager-field", "coach-field", ele);
+            const element = inputInnerText("player-total");
+            const total = totalCalculate("manager-field", "coach-field", element);
             const totalPlayer = calculate();
             const amount = total + totalPlayer;
             return amount;

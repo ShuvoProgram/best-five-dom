@@ -141,11 +141,12 @@
                     </div>
                     <!-- player selected section end -->
                     <!-- player budget section start -->
-                    <div class="grid-rows-6 text-white text-center bg-black h-auto">
+                    <div class="grid-rows-6 p-4 text-white text-center bg-black h-full">
                         <h2 class="text-2xl font-bold">Budget</h2>
+                        <span class="text-2xl text-orange-600 font-semibold hidden" id="error-1">Please Select Players!!!</span>
                         <div class="my-3">
                             <span class="p-1">Per Players</span>
-                            <input type="text" class="p-2 bg-black border-2" id="player-value" />
+                            <input type="number" class="p-2 bg-black border-2" id="player-value" />
                             <button class="bg-sky-500 w-72 p-2 mt-5" id="calculate">
                                 Calculate
                             </button>
@@ -156,11 +157,11 @@
                         <div class="my-3">
                             <div class="block m-3">
                                 <span class="p-1">Manager</span>
-                                <input type="text" class="p-2 bg-black border-2" id="manager-field" />
+                                <input type="number" class="p-2 bg-black border-2" id="manager-field" />
                             </div>
                             <div class="block m-3">
                                 <span class="p-1">Coach</span>
-                                <input type="text" class="p-2 bg-black border-2" id="coach-field" />
+                                <input type="number" class="p-2 bg-black border-2" id="coach-field" />
                             </div>
                             <button class="bg-sky-500 w-72 p-2 mt-5" id="total-calculate">
                                 Total Calculate
