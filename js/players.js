@@ -7,9 +7,10 @@ for (const player of players) {
         li.innerText = selected
         const pinFailureMessage = document.getElementById("pin-failure");
         const playerList = content.children.length + 1;
-        event.target.setAttribute("disabled", true)
         if (playerList <= 5) {
             content.appendChild(li);
+            event.target.setAttribute("disabled", true)
+            event.target.style.backgroundColor = 'gray'
             displayText(playerList, "total-players");
         } else {
             pinFailureMessage.style.display = 'block';
@@ -17,6 +18,7 @@ for (const player of players) {
         
         document.getElementById("calculate").addEventListener("click", function () {
             calculate("player-value", playerList);
+            
         })
         document.getElementById("total-calculate").addEventListener("click", function () {
             const ele = inputInnerText("player-total");
