@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select Best Five Players</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .player-list{
+            list-style: number;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,19 +20,22 @@
         <section class="flex flex-row pt-16">
             <div class="basis-1/4 mt-6">
                 <div class="bg-[url('./img/path56.png')] bg-no-repeat">
-                    <img src="./img/Mask Group.png" alt="">
+                    <img src="./img/Mask Group.png" alt="" />
                 </div>
             </div>
             <div class="basis-1/2 my-28">
                 <span class="text-orange-500 text-6xl font-bold font-sans italic mx-36">Select Your Best Five</span>
-                <p class="text-white my-8">The best football teams need to have won at least one trophy. They need to
-                    have played attractive but effective football in a climate of high technical standards. Most
-                    importantly, they need to have endured an era of stiff competition and intense rivalry.</p>
+                <p class="text-white my-8">
+                    The best football teams need to have won at least one trophy. They
+                    need to have played attractive but effective football in a climate
+                    of high technical standards. Most importantly, they need to have
+                    endured an era of stiff competition and intense rivalry.
+                </p>
             </div>
             <div class="basis-1/4">
-                <img src="./img/Card-psg.png" alt="">
+                <img src="./img/Card-psg.png" alt="" />
                 <div class="bg-[url('./img/Rectangle57.png')] bg-no-repeat float-right">
-                    <img src="./img/soccer-goal-top-png-8 4.png" alt="">
+                    <img src="./img/soccer-goal-top-png-8 4.png" alt="" />
                 </div>
             </div>
         </section>
@@ -35,63 +43,88 @@
     <!-- header section end -->
     <!-- main section start -->
     <main class="bg-slate-800">
+        <div class="notify-section text-white text-2xl font-semibold p-5">
+            <p class="hidden text-right" id="pin-failure">❌ Sorry!! You can't add more then 5 players</p>
+        </div>
         <section class="mx-auto container grid grid-cols-12 gap-8 py-14">
             <!-- player section start -->
             <div class="col-span-9">
                 <div class="grid grid-cols-12 gap-4" id="players">
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144 (1).png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Neymar Jr.</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144 (1).png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Neymar Jr.
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">
+                            Select
+                        </button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144.png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Lionel Messi</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144.png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Lionel Messi
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                      <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">Select</button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144 (2).png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Kylian Mbappé</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144 (2).png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Kylian Mbappé
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">
+                            Select
+                        </button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144 (3).png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Vítor Machado</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144 (3).png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Vítor Machado
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">
+                            Select
+                        </button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144 (4).png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Sergio Ramos</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144 (4).png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Sergio Ramos
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">
+                            Select
+                        </button>
                     </div>
                     <div class="col-span-4 bg-black border-2">
-                        <img class="w-screen" src="./img/players/Rectangle 144 (5).png" alt="">
-                        <h3 class="text-center p-2 text-2xl font-bold text-white">Renato Sanches</h3>
+                        <img class="w-screen" src="./img/players/Rectangle 144 (5).png" alt="" />
+                        <h3 class="text-center p-2 text-2xl font-bold text-white">
+                            Renato Sanches
+                        </h3>
                         <div class="text-center text-white p-2 my-2">
                             <span class="p-1">36 Goals</span>
                             <span class="p-1">120 Assist</span>
                         </div>
-                        <button class="block p-2 bg-sky-600 mx-auto w-72 my-4 players">Select</button>
+                        <button class="block p-2 bg-sky-600 mx-auto text-white font-semibold text-2xl w-72 my-4 players player-btn">
+                            Select
+                        </button>
                     </div>
                 </div>
             </div>
@@ -101,12 +134,10 @@
                 <div class="grid grid-rows-12 gap-8">
                     <!-- player selected section start -->
                     <div class="grid-rows-6 text-white text-center p-3 bg-black h-96">
-                        <h2 class="text-2xl font-bold">Selected - V</h2>
-                        <table class="mx-auto mt-10">
-                            <tbody id="content-container" class="text-2xl">
-                                
-                            </tbody>
-                        </table>
+                        <h2 class="text-2xl font-bold">Selected - <span id="total-players">V</span></h2>
+                        <ol class="mx-auto mt-6 font-bold text-xl w-2/4 player-list" id="content-container">
+                            
+                        </ol>
                     </div>
                     <!-- player selected section end -->
                     <!-- player budget section start -->
@@ -114,22 +145,26 @@
                         <h2 class="text-2xl font-bold">Budget</h2>
                         <div class="my-3">
                             <span class="p-1">Per Players</span>
-                            <input type="text" class="p-2 bg-black border-2" id="player-value">
-                            <button class="bg-sky-500 w-72 p-2 mt-5" id="calculate">Calculate</button>
+                            <input type="text" class="p-2 bg-black border-2" id="player-value" />
+                            <button class="bg-sky-500 w-72 p-2 mt-5" id="calculate">
+                                Calculate
+                            </button>
                         </div>
                         <div>
-                            <p>Player Expenses: <span id="player-total">$5000</span></p>
+                            <p>Player Expenses: $<span id="player-total">5000</span></p>
                         </div>
                         <div class="my-3">
                             <div class="block m-3">
                                 <span class="p-1">Manager</span>
-                            <input type="text" class="p-2 bg-black border-2" id="manager-field">
+                                <input type="text" class="p-2 bg-black border-2" id="manager-field" />
                             </div>
                             <div class="block m-3">
                                 <span class="p-1">Coach</span>
-                            <input type="text" class="p-2 bg-black border-2" id="coach-field">
+                                <input type="text" class="p-2 bg-black border-2" id="coach-field" />
                             </div>
-                            <button class="bg-sky-500 w-72 p-2 mt-5" id="total-calculate">Total Calculate</button>
+                            <button class="bg-sky-500 w-72 p-2 mt-5" id="total-calculate">
+                                Total Calculate
+                            </button>
                         </div>
                         <div class="m-4">
                             <h2>Total: $<span id="total-amount">11000</span></h2>
@@ -148,4 +183,5 @@
     <script src="./js/common.js"></script>
     <script src="./js/players.js"></script>
 </body>
+
 </html>

@@ -1,27 +1,31 @@
-function playerList(className){
-    const players = document.getElementsByClassName(className);
-    let count = 1;
-    for (const player of players) {
-        player.addEventListener("click", function (event) {
-            const selected = event.target.parentNode;
-            const selectedPlayerName = selected.querySelector("h3").innerText;
-            const content = document.getElementById("content-container");
-            const contentList = document.createElement("tr");
-            contentList.innerHTML = `
-        <th>${count++}</th>
-        <td>${selectedPlayerName}</td>
-        `
-            content.appendChild(contentList);
-            
-        })
-
-    }
+function calculate(value){
+    const perPlayer = inputValue(value);
+    const alu = document.getElementById("total-players").innerText;
+    const totalPlayerBudget = parseFloat(parseFloat(alu) * perPlayer);
+    displayText(totalPlayerBudget, "player-total");
 }
 
-
-function inputValue(idName){
-    const perPlayer = document.getElementById(idName);
-    const perPlayerString = perPlayer.value;
-    const player = parseInt(perPlayerString);
-    return player;
+function totalCalculate(input1, input2, dim){
+    const managerBudget = inputValue(input1);
+    const coachBudget = inputValue(input2);
+    const nextCalculate = managerBudget + coachBudget + dim;
+    displayText(nextCalculate, "total-amount");
 }
+
+function displayText(display, id){
+    const totalAmount = document.getElementById(id);
+    totalAmount.innerText = display;
+}
+function inputValue(idName) {
+  const perPlayer = document.getElementById(idName);
+  const perPlayerString = perPlayer.value;
+  const player = parseInt(perPlayerString);
+  return player;
+}
+
+function inputInnerText(id){
+    const elementId = document.getElementById(id);
+    const innerText = parseInt(elementId.innerText);
+    return innerText;
+}
+
