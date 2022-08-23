@@ -1,8 +1,12 @@
 const players = document.getElementsByClassName("players");
+// loop every class element
 for (const player of players) {
     player.addEventListener("click", function (event) {
+        // find specific text
         const selected = event.target.parentNode.children[1].innerText;
+        // get list div element
         const content = document.getElementById("content-container");
+        // create li element
         const li = document.createElement("li");
         li.innerText = selected
         const pinFailureMessage = document.getElementById("pin-failure");
@@ -18,8 +22,6 @@ for (const player of players) {
         
         document.getElementById("calculate").addEventListener("click", function () {
             calculate("player-value");
-            document.getElementById("player-value").value = '';
-            
         })
         document.getElementById("total-calculate").addEventListener("click", function () {
             const element = inputInnerText("player-total");

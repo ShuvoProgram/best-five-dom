@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Select Best Five Players</title>
+    <title>elect top 5 player</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .player-list{
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="basis-1/2 my-28">
-                <span class="text-orange-500 text-6xl font-bold font-sans italic mx-36">Select Your Best Five</span>
+                <span class="text-orange-500 text-6xl font-bold font-sans italic mx-36">Select top 5 player</span>
                 <p class="text-white my-8">
                     The best football teams need to have won at least one trophy. They
                     need to have played attractive but effective football in a climate
@@ -44,7 +44,7 @@
     <!-- main section start -->
     <main class="bg-slate-800">
         <div class="notify-section text-white text-2xl font-semibold p-5">
-            <p class="hidden text-right" id="pin-failure">❌ Sorry!! You can't add more then 5 players</p>
+            <p class="hidden text-center" id="pin-failure">❌ Sorry!! You can't add more then 5 players</p>
         </div>
         <section class="mx-auto container grid grid-cols-12 gap-8 py-14">
             <!-- player section start -->
@@ -141,7 +141,7 @@
                     </div>
                     <!-- player selected section end -->
                     <!-- player budget section start -->
-                    <div class="grid-rows-6 p-4 text-white text-center bg-black h-full">
+                    <div class="grid-rows-6 p-2 text-white text-center bg-black h-full">
                         <h2 class="text-2xl font-bold">Budget</h2>
                         <span class="text-2xl text-orange-600 font-semibold hidden" id="error-1">Please Select Players!!!</span>
                         <div class="my-3">
@@ -152,7 +152,7 @@
                             </button>
                         </div>
                         <div>
-                            <p>Player Expenses: $<span id="player-total">5000</span></p>
+                            <p>Player Expenses: $<span id="player-total">00</span></p>
                         </div>
                         <div class="my-3">
                             <div class="block m-3">
@@ -168,7 +168,8 @@
                             </button>
                         </div>
                         <div class="m-4">
-                            <h2>Total: $<span id="total-amount">11000</span></h2>
+                            <h2>Total: $<span id="total-amount">00</span></h2>
+                            <span class="text-2xl text-orange-600 font-semibold hidden" id="error-2">Please Select Players!!!</span>
                         </div>
                     </div>
                     <!-- player budget section end -->
